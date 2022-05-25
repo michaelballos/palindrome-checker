@@ -1,11 +1,11 @@
-const palindromeChecker = (string) => {
-  const originalString = string.replace(/[^a-zA-Z0-9]/ig, '').toLowerCase().trim();
+const palindromeChecker = (input: string): boolean => {
+  const originalString = input.replace(/[^a-zA-Z0-9]/ig, '').toLowerCase().trim();
   const palindrome = originalString.split('').reverse().join('').toLowerCase();
   if (originalString === palindrome) {
-    console.log(`${string}: True`);
+    console.log(`${input}: True`);
     return true;
   } else {
-    console.log(`${string}: False`);
+    console.log(`${input}: False`);
     return false;
   }
 };
